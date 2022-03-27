@@ -12,6 +12,10 @@
   line-height: 1;
 }
 
+.coffeeEmoji {
+  display: none;
+}
+
 .title1 {
   color: rgba(249, 250, 251, 1);
 }
@@ -130,5 +134,9 @@
 @media (min-width: 1280px) {
   .title2 {
     display: inline;
+  }
+
+  .coffeeEmoji {
+    display: inline-block;
   }
 }

@@ -8,7 +8,8 @@ function Banner(props) {
     <div className={styles.container}>
       <h1 className={styles.title}>
         <span className={styles.title1}>Coffee</span>{" "}
-        <spa className={styles.title2}>Connoisseur</spa> ☕
+        <span className={styles.title2}>Connoisseur</span>{" "}
+        <span className={styles.coffeeEmoji}>☕</span>
       </h1>
       <p className={styles.subTitle}>Discover your local coffee shops! </p>
       <button className={styles.button} onClick={buttonHandler}>
