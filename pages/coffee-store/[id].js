@@ -1,16 +1,20 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { BiCoffeeTogo } from "react-icons/bi";
 
 function CoffeeStore(props) {
   const { query } = useRouter();
 
   return (
     <div>
-      <Link href="/">
-        <a>Back to home</a>
+      <Link href="/" scroll={false}>
+        <a>
+          <BiCoffeeTogo />
+          Back to home
+        </a>
       </Link>
-      {query.id}{" "}
+      {query.id}
     </div>
   );
 }
