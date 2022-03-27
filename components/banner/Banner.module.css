@@ -8,12 +8,8 @@
   font-weight: 800;
   color: var(--text-black);
 
-  font-size: 3rem; /*48px*/
+  font-size: 3rem /* 48px */;
   line-height: 1;
-}
-
-.coffeeEmoji {
-  display: none;
 }
 
 .title1 {
@@ -38,12 +34,12 @@
 }
 
 .button {
-  background-color: var(--text-purple);
+  background-color: var(--text-purple-dark);
   cursor: pointer;
   color: white;
   outline: 0;
   border: 0px;
-  transition: background-color ease 500ms;
+
   padding-top: 1rem /* 16px */;
   padding-bottom: 1rem /* 16px */;
   font-size: 1.125rem /* 18px */;
@@ -134,9 +130,5 @@
 @media (min-width: 1280px) {
   .title2 {
     display: inline;
-  }
-
-  .coffeeEmoji {
-    display: inline-block;
   }
 }

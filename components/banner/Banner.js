@@ -12,9 +12,11 @@ function Banner(props) {
         <span className={styles.coffeeEmoji}>☕</span>
       </h1>
       <p className={styles.subTitle}>Discover your local coffee shops! </p>
-      <button className={styles.button} onClick={buttonHandler}>
-        {buttonText}
-      </button>
+      <div className={styles.buttonWrapper}>
+        <button className={styles.button} onClick={buttonHandler}>
+          {buttonText}
+        </button>
+      </div>
     </div>
   );
 }
