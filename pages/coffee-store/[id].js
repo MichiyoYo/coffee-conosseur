@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { BiCoffeeTogo } from "react-icons/bi";
+import { MdOutlineArrowBack } from "react-icons/md";
 
 function CoffeeStore(props) {
   const { query } = useRouter();
@@ -10,7 +10,7 @@ function CoffeeStore(props) {
     <div>
       <Link href="/" scroll={false}>
         <a>
-          <BiCoffeeTogo />
+          <MdOutlineArrowBack />
           Back to home
         </a>
       </Link>
