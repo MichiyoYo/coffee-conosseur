@@ -1,7 +1,10 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 function CoffeeStore(props) {
-  return <div> this is the coffee store page </div>;
+  const { query } = useRouter();
+
+  return <div> {query.id} </div>;
 }
 
 export default CoffeeStore;
