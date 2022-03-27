@@ -38,12 +38,12 @@
 }
 
 .button {
-  background-color: var(--text-purple-dark);
+  background-color: var(--text-purple);
   cursor: pointer;
   color: white;
   outline: 0;
   border: 0px;
-
+  transition: background-color ease 500ms;
   padding-top: 1rem /* 16px */;
   padding-bottom: 1rem /* 16px */;
   font-size: 1.125rem /* 18px */;
