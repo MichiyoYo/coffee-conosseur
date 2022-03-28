@@ -3,6 +3,8 @@
   --text-purple-dark: rgba(79, 70, 229, 1);
   --text-black: rgba(17, 24, 39, 1);
   --text-white-100: rgba(229, 231, 2352, 1);
+  --light-purple: #9f6ef4;
+  --button-color: rgb(253 67 130);
 }
 
 html,

@@ -1,15 +1,32 @@
 /** By default, this is a mobile breakpoint **/
 .container {
   margin-bottom: 1rem;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 40px;
+  text-align: center;
 }
 
 .title {
   letter-spacing: -0.025em;
   font-weight: 800;
   color: var(--text-black);
-
-  font-size: 3rem /* 48px */;
+  font-size: 2.2rem;
   line-height: 1;
+  text-shadow: 1px 1px 4px #111111;
+}
+
+.coffeeEmoji {
+  display: none;
 }
 
 .title1 {
@@ -18,38 +35,36 @@
 
 .title2 {
   display: block;
-  color: var(--text-purple);
+  color: rgba(249, 250, 251, 1);
 }
 
 .subTitle {
   margin-top: 0.75rem;
-  font-size: 1.5rem /* 24px */;
-  line-height: 2rem /* 32px */;
-
+  font-size: 1rem;
+  line-height: 1rem;
+  text-shadow: 1px 1px 4px #111111;
   color: var(--text-white-100);
 }
 
 .buttonWrapper {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .button {
-  background-color: var(--text-purple);
+  background-color: var(--button-color);
   cursor: pointer;
   color: white;
   outline: 0;
   border: 0px;
   transition: background-color ease 500ms;
-  padding-top: 1rem /* 16px */;
-  padding-bottom: 1rem /* 16px */;
-  font-size: 1.125rem /* 18px */;
+  padding-top: 0.3rem /* 16px */;
+  padding-bottom: 0.3rem /* 16px */;
+  font-size: 0.8rem /* 18px */;
   line-height: 1.75rem /* 28px */;
-  padding-left: 2.5rem /* 40px */;
-  padding-right: 2.5rem /* 40px */;
-}
-
-.button:hover {
-  background-color: var(--text-purple-dark);
+  padding-left: 1rem /* 40px */;
+  padding-right: 1rem /* 40px */;
+  border-bottom: 8px solid rgb(192, 59, 104);
+  border-radius: 5px;
 }
 
 /** 
@@ -72,6 +87,7 @@
   .subTitle {
     margin-top: 1.25rem;
     max-width: 36rem;
+    font-size: 1.3rem;
   }
 
   .buttonWrapper {
@@ -89,6 +105,7 @@
 
   .subTitle {
     margin-top: 1.25rem;
+    font-size: 1.4rem;
   }
 
   .button {
@@ -103,22 +120,15 @@
 
 /** lg breakpoint **/
 @media (min-width: 1024px) {
-  .container {
-    text-align: left;
-  }
-
   .title {
     font-size: 4.5rem /* 72px */;
     line-height: 1;
   }
 
-  .title2 {
-    padding-left: 0.5rem;
-  }
-
   .subTitle {
     margin-left: 0px;
     margin-right: 0px;
+    font-size: 1.5rem;
   }
 
   .buttonWrapper {
@@ -130,5 +140,8 @@
 @media (min-width: 1280px) {
   .title2 {
     display: inline;
+  }
+  .coffeeEmoji {
+    display: inline-block;
   }
 }
