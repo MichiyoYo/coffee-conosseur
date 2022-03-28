@@ -20,10 +20,11 @@
   letter-spacing: -0.025em;
   font-weight: 800;
   color: var(--text-black);
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1;
   text-shadow: 1px 1px 4px #111111;
   font-family: "Pacifico", cursive;
+  font-weight: 200;
 }
 
 .coffeeEmoji {
@@ -46,7 +47,7 @@
 .subTitle {
   margin-top: 0.75rem;
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 0.3rem;
   text-shadow: 1px 1px 4px #111111;
   color: var(--text-white-100);
 }
@@ -94,12 +95,6 @@
   .buttonWrapper {
     display: flex;
   }
-
-  .coffeeEmoji {
-    display: block;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
 }
 
 /** md breakpoint **/
@@ -137,7 +132,9 @@
   }
 
   .coffeeEmoji {
+    display: block;
     font-size: 3rem;
+    margin-bottom: 2rem;
   }
 
   /* .buttonWrapper {

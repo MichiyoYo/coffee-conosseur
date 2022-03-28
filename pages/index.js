@@ -22,7 +22,7 @@ export default function Home() {
             <Image
               src="/static/hero.png"
               width={1920}
-              height={1080}
+              height={875}
               alt="Hero Image"
             />
           </div>
