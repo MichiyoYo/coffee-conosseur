@@ -57,6 +57,8 @@ button {
   background-color: transparent;
   background-image: none;
   font-weight: 600;
+  font-family: inherit;
+  text-transform: capitalize;
 }
 
 button:focus {
