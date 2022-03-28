@@ -7,7 +7,7 @@ function Banner(props) {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <span className={styles.coffeeEmoji}>☕</span>
+        <span className={styles.coffeeEmoji}>☕🍵🧋</span>
         <span className={styles.title1}>Coffee</span>{" "}
         <span className={styles.title2}>Connoisseur</span>{" "}
       </h1>

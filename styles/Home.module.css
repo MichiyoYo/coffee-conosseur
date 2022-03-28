@@ -34,7 +34,16 @@
   content: " ";
   height: 100%;
   width: 100%;
-  background-color: #9f6ef4d9;
+  /* background-color: #9f6ef4d9; */
+  background-image: linear-gradient(
+    to right,
+    #874eeb,
+    #aa3ad0,
+    #bf25b4,
+    #ca0e98,
+    #cf007e
+  );
+  opacity: 0.7;
   position: absolute;
 }
 
