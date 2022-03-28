@@ -29,6 +29,10 @@
   display: none;
 }
 
+.buttonWrapper {
+  margin: 1rem 0;
+}
+
 .title1 {
   color: rgba(249, 250, 251, 1);
 }
@@ -44,10 +48,6 @@
   line-height: 1rem;
   text-shadow: 1px 1px 4px #111111;
   color: var(--text-white-100);
-}
-
-.buttonWrapper {
-  margin-top: 1rem;
 }
 
 .button {
@@ -92,7 +92,11 @@
 
   .buttonWrapper {
     display: flex;
-    margin-top: 2rem;
+  }
+
+  .coffeeEmoji {
+    display: block;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -104,8 +108,8 @@
   }
 
   .subTitle {
-    margin-top: 1.25rem;
     font-size: 1.4rem;
+    margin: 1.5rem 0;
   }
 
   .button {
@@ -122,18 +126,17 @@
 @media (min-width: 1024px) {
   .title {
     font-size: 4.5rem /* 72px */;
-    line-height: 1;
+    line-height: 1.2;
   }
 
   .subTitle {
-    margin-left: 0px;
-    margin-right: 0px;
     font-size: 1.5rem;
+    margin: 1.5rem 0;
   }
 
-  .buttonWrapper {
+  /* .buttonWrapper {
     justify-content: flex-start;
-  }
+  } */
 }
 
 /** xl breakpoint **/
@@ -141,7 +144,9 @@
   .title2 {
     display: inline;
   }
-  .coffeeEmoji {
-    display: inline-block;
+
+  .subTitle {
+    font-size: 1.5rem;
+    margin: 2rem 0;
   }
 }

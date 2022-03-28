@@ -7,9 +7,9 @@ function Banner(props) {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
+        <span className={styles.coffeeEmoji}>☕</span>
         <span className={styles.title1}>Coffee</span>{" "}
         <span className={styles.title2}>Connoisseur</span>{" "}
-        <span className={styles.coffeeEmoji}>☕</span>
       </h1>
       <p className={styles.subTitle}>Discover your local coffee shops! </p>
       <div className={styles.buttonWrapper}>
