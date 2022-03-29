@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Coffee Connoisseur</title>
+        <title>Coffee Connoisseur | Home</title>
         <meta name="description" content="Discover coffee shops in your area" />
       </Head>
 
@@ -46,6 +46,21 @@ export default function Home() {
             />
             <Card
               name="Three"
+              imgUrl="/static/placeholder.jpg"
+              url="/coffee-store/la-colombe"
+            />
+            <Card
+              name="Four"
+              imgUrl="/static/placeholder.jpg"
+              url="/coffee-store/la-colombe"
+            />
+            <Card
+              name="Five"
+              imgUrl="/static/placeholder.jpg"
+              url="/coffee-store/la-colombe"
+            />
+            <Card
+              name="Six"
               imgUrl="/static/placeholder.jpg"
               url="/coffee-store/la-colombe"
             />

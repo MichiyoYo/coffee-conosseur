@@ -1,11 +1,11 @@
 .shopName {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: inline-block;
 }
 
 /* glass-morphism */
 .card {
   justify-content: center;
-  padding: 20px;
+  padding: 20px 30px;
 }
