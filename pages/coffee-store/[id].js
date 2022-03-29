@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { MdOutlineArrowBack } from "react-icons/";
+import { MdOutlineArrowBack } from "react-icons/md";
 
 function CoffeeStore(props) {
   const { query } = useRouter();

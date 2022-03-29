@@ -15,8 +15,8 @@ function Card(props) {
           <Image
             src={imgUrl}
             alt={`A picture of the store "${name}"`}
-            width={1200}
-            height={800}
+            width={1920}
+            height={1080}
           />
         </div>
       </a>
