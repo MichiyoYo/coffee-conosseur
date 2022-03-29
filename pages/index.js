@@ -46,7 +46,7 @@ export default function Home() {
               url="/coffee-store/la-colombe"
             />
             <Card
-              name="THree"
+              name="Three"
               imgUrl="/static/placeholder.jpg"
               url="/coffee-store/la-colombe"
             />
