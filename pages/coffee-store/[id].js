@@ -7,7 +7,7 @@ function CoffeeStore(props) {
 
   return (
     <div>
-      <Link href="/" scroll={false}>
+      <Link href="/">
         <a>
           <MdOutlineArrowBack />
           Back to home
