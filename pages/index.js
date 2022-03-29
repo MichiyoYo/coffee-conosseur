@@ -35,9 +35,21 @@ export default function Home() {
         <div className={styles.shopContainer}>
           <h2 className={styles.shopHeader}>Shop Header</h2>
           <div className={styles.cardLayout}>
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              name="One"
+              imgUrl="/static/placeholder.jpg"
+              url="/coffee-store/la-colombe"
+            />
+            <Card
+              name="Two"
+              imgUrl="/static/placeholder.jpg"
+              url="/coffee-store/la-colombe"
+            />
+            <Card
+              name="THree"
+              imgUrl="/static/placeholder.jpg"
+              url="/coffee-store/la-colombe"
+            />
           </div>
         </div>
       </main>
