@@ -5,11 +5,13 @@ import Image from "next/image";
 import coffeeStoreData from "../../data/coffee-stores.json";
 
 import { MdOutlineArrowBack } from "react-icons/md";
+import mitt from "next/dist/shared/lib/mitt";
 
 export function getStaticProps({ params }) {
   const storeId = coffeeStoreData.find(
     (store) => store.id === Number(params.id)
   );
+
   return {
     props: {
       coffeeStore: storeId,
@@ -19,6 +21,7 @@ export function getStaticProps({ params }) {
 
 export function getStaticPaths() {
   const storePaths = [];
+
   coffeeStoreData.forEach((store) => {
     storePaths.push({
       params: {
@@ -26,21 +29,28 @@ export function getStaticPaths() {
       },
     });
   });
-  console.log(storePaths);
 
   return {
     paths: storePaths,
-    fallback: false,
+    fallback: true,
   };
 }
 
 function CoffeeStore({ coffeeStore }) {
-  const { query } = useRouter();
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   const { address, imgUrl, name, neighborhood, websiteUrl } = coffeeStore;
+
   return (
     <div>
       <Head>
-        <title>{name} | Coffee Shop</title>
+        <title>
+          {name} | {neighborhood}
+        </title>
         <meta
           name="description"
           content={`All about the "${name}" coffee shop`}
@@ -57,8 +67,8 @@ function CoffeeStore({ coffeeStore }) {
           <Image
             src={imgUrl}
             alt={`A picture of the store "${name}"`}
-            width={400}
-            height={300}
+            width={640}
+            height={480}
           />
           <h2>{name}</h2>
           <p>{address}</p>
