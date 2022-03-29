@@ -3,11 +3,11 @@ import Image from "next/image";
 import Banner from "../components/banner/Banner";
 import Card from "../components/card/Card";
 import styles from "../styles/Home.module.css";
-import coffeeStores from "../data/coffee-stores.json";
+import coffeeStoreData from "../data/coffee-stores.json";
 
 export async function getStaticProps(context) {
   return {
-    props: { coffeeStores },
+    props: { coffeeStores: coffeeStoreData },
   };
 }
 
@@ -41,19 +41,27 @@ export default function Home(props) {
           />
         </div>
         <div className={styles.shopContainer}>
-          <h2 className={styles.shopHeader}>Shops Header</h2>
-          <div className={styles.cardLayout}>
-            {coffeeStores.map((store) => (
-              <Card
-                key={store.id}
-                name={store.name}
-                imgUrl={`https://picsum.photos/id/${Math.floor(
-                  Math.random() * 200
-                )}/800/600`}
-                url={`/coffee-store/${store.id}`}
-              />
-            ))}
-          </div>
+          {coffeeStores.length ? (
+            <>
+              <h2 className={styles.shopHeader}>Coffee Shops in Echo Park</h2>
+              <div className={styles.cardLayout}>
+                {coffeeStores.map((store) => (
+                  <Card
+                    key={store.id}
+                    name={store.name}
+                    imgUrl={`https://picsum.photos/id/${Math.floor(
+                      Math.random() * 200
+                    )}/800/600`}
+                    url={`/coffee-store/${store.id}`}
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            <div>
+              <h2 className={styles.shopHeader}>No Coffee Shops Found 💔</h2>
+            </div>
+          )}
         </div>
       </main>
     </div>
