@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import coffeeStoreData from "../../data/coffee-stores.json";
+import styles from "../../styles/CoffeeStore.module.css";
 
 import { MdOutlineArrowBack } from "react-icons/md";
 import mitt from "next/dist/shared/lib/mitt";
@@ -44,7 +45,7 @@ function CoffeeStore({ coffeeStore }) {
   const { address, imgUrl, name, neighborhood, websiteUrl } = coffeeStore;
 
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>
           {name} | {neighborhood}
@@ -54,26 +55,36 @@ function CoffeeStore({ coffeeStore }) {
           content={`All about the "${name}" coffee shop`}
         />
       </Head>
-      <div>
+      <div className={styles.storeContent}>
         <Link href="/">
-          <a>
+          <a className={styles.backHomeLink}>
             <MdOutlineArrowBack />
             Back to home
           </a>
         </Link>
-        <div>
-          <Image
-            src={imgUrl}
-            alt={`A picture of the store "${name}"`}
-            width={640}
-            height={480}
-          />
-          <h2>{name}</h2>
-          <p>{address}</p>
-          <p>{neighborhood}</p>
-          <a href={websiteUrl} target="_blank" rel="noreferrer noopener">
-            <p>{websiteUrl}</p>
-          </a>
+        <div className={styles.storeDetails}>
+          <div className={styles.storeImage}>
+            <Image
+              src={imgUrl}
+              alt={`A picture of the store "${name}"`}
+              width={800}
+              height={600}
+              layout="responsive"
+            />
+          </div>
+          <div className={styles.storeInfo}>
+            <h2 className={styles.storeName}>{name}</h2>
+            <p className={styles.storeAddress}>{address}</p>
+            <p className={styles.storeLocation}>{neighborhood}</p>
+            <a
+              className={styles.storeWebsite}
+              href={websiteUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <p>{websiteUrl}</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
