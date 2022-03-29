@@ -20,14 +20,12 @@ export function getStaticProps({ params }) {
 }
 
 export function getStaticPaths() {
-  const storePaths = [];
-
-  coffeeStoreData.forEach((store) => {
-    storePaths.push({
+  const storePaths = coffeeStoreData.map((store) => {
+    return {
       params: {
         id: String(store.id),
       },
-    });
+    };
   });
 
   return {
