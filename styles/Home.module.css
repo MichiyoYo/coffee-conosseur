@@ -34,7 +34,6 @@
   content: " ";
   height: 100%;
   width: 100%;
-  /* background-color: #9f6ef4d9; */
   background-image: linear-gradient(
     to right,
     #874eeb,
@@ -88,31 +87,18 @@
 **/
 
 @media (min-width: 640px) {
-  .container {
-  }
-
   .cardLayout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 768px) {
-  .container {
-  }
-
-  .main {
-  }
-
   .cardLayout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
-  .container {
-  }
-  .main {
-  }
   .cardLayout {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

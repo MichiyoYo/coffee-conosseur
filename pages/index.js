@@ -3,8 +3,17 @@ import Image from "next/image";
 import Banner from "../components/banner/Banner";
 import Card from "../components/card/Card";
 import styles from "../styles/Home.module.css";
+import coffeeStores from "../data/coffee-stores.json";
 
-export default function Home() {
+export async function getStaticProps(context) {
+  return {
+    props: { coffeeStores },
+  };
+}
+
+export default function Home(props) {
+  const { coffeeStores } = props;
+
   const handleOnBannerBtnClick = (e) => {
     console.log("clicked button");
   };
@@ -32,38 +41,18 @@ export default function Home() {
           />
         </div>
         <div className={styles.shopContainer}>
-          <h2 className={styles.shopHeader}>Shop Header</h2>
+          <h2 className={styles.shopHeader}>Shops Header</h2>
           <div className={styles.cardLayout}>
-            <Card
-              name="One"
-              imgUrl="/static/placeholder.jpg"
-              url="/coffee-store/la-colombe"
-            />
-            <Card
-              name="Two"
-              imgUrl="/static/placeholder.jpg"
-              url="/coffee-store/la-colombe"
-            />
-            <Card
-              name="Three"
-              imgUrl="/static/placeholder.jpg"
-              url="/coffee-store/la-colombe"
-            />
-            <Card
-              name="Four"
-              imgUrl="/static/placeholder.jpg"
-              url="/coffee-store/la-colombe"
-            />
-            <Card
-              name="Five"
-              imgUrl="/static/placeholder.jpg"
-              url="/coffee-store/la-colombe"
-            />
-            <Card
-              name="Six"
-              imgUrl="/static/placeholder.jpg"
-              url="/coffee-store/la-colombe"
-            />
+            {coffeeStores.map((store) => (
+              <Card
+                key={store.id}
+                name={store.name}
+                imgUrl={`https://picsum.photos/id/${Math.floor(
+                  Math.random() * 200
+                )}/800/600`}
+                url={`/coffee-store/${store.id}`}
+              />
+            ))}
           </div>
         </div>
       </main>
