@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/banner/Banner";
+import Card from "../components/card/Card";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -30,6 +31,14 @@ export default function Home() {
             buttonText="View stores nearby"
             buttonHandler={handleOnBannerBtnClick}
           />
+        </div>
+        <div className={styles.shopContainer}>
+          <h2 className={styles.shopHeader}>Shop Header</h2>
+          <div className={styles.cardLayout}>
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </div>
       </main>
     </div>
