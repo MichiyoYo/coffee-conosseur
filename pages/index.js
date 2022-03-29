@@ -14,7 +14,6 @@ export default function Home() {
       <Head>
         <title>Coffee Connoisseur</title>
         <meta name="description" content="Discover coffee shops in your area" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
