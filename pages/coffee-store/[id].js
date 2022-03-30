@@ -58,32 +58,37 @@ function CoffeeStore({ coffeeStore }) {
       <div className={styles.storeContent}>
         <Link href="/">
           <a className={styles.backHomeLink}>
-            <MdOutlineArrowBack />
-            Back to home
+            <MdOutlineArrowBack /> Back to home
           </a>
         </Link>
         <div className={styles.storeDetails}>
           <div className={styles.storeImage}>
-            <Image
-              src={imgUrl}
-              alt={`A picture of the store "${name}"`}
-              width={800}
-              height={600}
-              layout="responsive"
-            />
-          </div>
-          <div className={styles.storeInfo}>
-            <h2 className={styles.storeName}>{name}</h2>
-            <p className={styles.storeAddress}>{address}</p>
-            <p className={styles.storeLocation}>{neighborhood}</p>
             <a
               className={styles.storeWebsite}
               href={websiteUrl}
               target="_blank"
               rel="noreferrer noopener"
             >
-              <p>{websiteUrl}</p>
+              <Image
+                src={imgUrl}
+                alt={`A picture of the store "${name}"`}
+                width={800}
+                height={600}
+                layout="responsive"
+              />
             </a>
+          </div>
+          <div className={styles.storeInfo}>
+            <a
+              className={styles.storeWebsite}
+              href={websiteUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <h2 className={styles.storeName}>{name}</h2>
+            </a>
+            <p className={styles.storeAddress}>{address}</p>
+            <p className={styles.storeLocation}>{neighborhood}</p>
           </div>
         </div>
       </div>

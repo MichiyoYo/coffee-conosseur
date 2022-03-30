@@ -34,6 +34,20 @@
 }
 
 .backHomeLink {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.storeName {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.storeAddress,
+.storeLocation,
+.storeWebsite {
+  font-size: 1.23rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 640px) {
